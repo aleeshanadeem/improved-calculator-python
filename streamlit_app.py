@@ -18,6 +18,7 @@ with st.sidebar:
         <p style="margin:0;color:#ff9800;font-weight:bold;">🚀 2(AN)K</p>
     </div>
     """, unsafe_allow_html=True)
+     st.markdown("---")
 
 # ----------------------------
 # Title
@@ -97,12 +98,3 @@ if st.button("🚀 Calculate"):
         else:
             st.info("⚪ Zero Result")
 
-st.divider()
-
-st.markdown("""
-<div class="developer-box">
-    <p class="developed">Developed by</p>
-    <h2 class="name">Aleesha Nadeem</h2>
-    <p class="brand"> 2(AN)K</p>
-</div>
-""", unsafe_allow_html=True)
