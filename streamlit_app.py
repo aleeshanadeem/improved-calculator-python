@@ -8,26 +8,22 @@ st.set_page_config(
     page_icon="🧮",
     layout="centered"
 )
+with st.sidebar:
+    st.markdown("<br><br><br><br><br><br>", unsafe_allow_html=True)
 
-st.sidebar.markdown("""
-<div style="
-    position:fixed;
-    bottom:20px;
-    left:20px;
-    width:250px;
-    text-align:left;
-">
-    <p style="margin:0;font-size:13px;color:gray;">
-        Developed by
-    </p>
-    <h4 style="margin:2px 0;">
-        Aleesha Nadeem
-    </h4>
-    <p style="margin:0;color:#ff9800;font-weight:bold;">
-        🚀 2(AN)K
-    </p>
-</div>
-""", unsafe_allow_html=True)
+    st.markdown("""
+    <div style="text-align:center;">
+        <p style="margin:0;font-size:13px;color:gray;">
+            Developed by
+        </p>
+        <h3 style="margin:5px 0;">
+            Aleesha Nadeem
+        </h3>
+        <p style="margin:0;font-size:18px;color:#ff9800;font-weight:bold;">
+            🚀 2(AN)K
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
 
 # ----------------------------
 # Title
