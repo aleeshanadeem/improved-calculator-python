@@ -9,16 +9,25 @@ st.set_page_config(
     layout="centered"
 )
 
-with st.sidebar:
-    st.markdown("---")
-    st.markdown("""
-    <div style="text-align:left;">
-        <p style="margin:0;font-size:13px;color:gray;">Developed by</p>
-        <h4 style="margin:2px 0;">Aleesha Nadeem</h4>
-        <p style="margin:0;color:#ff9800;font-weight:bold;">🚀 2(AN)K</p>
-    </div>
-    """, unsafe_allow_html=True)
-     st.markdown("---")
+st.sidebar.markdown("""
+<div style="
+    position:fixed;
+    bottom:20px;
+    left:20px;
+    width:250px;
+    text-align:left;
+">
+    <p style="margin:0;font-size:13px;color:gray;">
+        Developed by
+    </p>
+    <h4 style="margin:2px 0;">
+        Aleesha Nadeem
+    </h4>
+    <p style="margin:0;color:#ff9800;font-weight:bold;">
+        🚀 2(AN)K
+    </p>
+</div>
+""", unsafe_allow_html=True)
 
 # ----------------------------
 # Title
