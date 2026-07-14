@@ -97,7 +97,7 @@ st.divider()
 st.markdown(
 """
 <div class="footer">
-<b>Aleesha Nadeem | 2(AN)K</b>
+   <b>Aleesha Nadeem | 2(AN)K</b>
 </div>
 """,
 unsafe_allow_html=True
