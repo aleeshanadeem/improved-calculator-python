@@ -1,71 +1,89 @@
 import streamlit as st
 
+# ----------------------------
+# Page Configuration
+# ----------------------------
 st.set_page_config(
     page_title="Smart Calculator",
     page_icon="🧮",
     layout="centered"
 )
 
+# ----------------------------
+# Custom CSS
+# ----------------------------
 st.markdown("""
 <style>
 
-.main{
-    background-color:#0f172a;
-}
-
-.title{
-text-align:center;
-font-size:45px;
-font-weight:bold;
-color:#00E5FF;
-}
-
-.subtitle{
-text-align:center;
-font-size:18px;
-color:white;
+h1{
+    text-align:center;
+    color:#00E5FF;
+    font-size:50px;
 }
 
 .footer{
-text-align:center;
-font-size:16px;
-color:gray;
-margin-top:40px;
+    text-align:center;
+    color:gray;
+    margin-top:40px;
 }
 
-.result{
-background:#1e293b;
-padding:20px;
-border-radius:15px;
+.stButton>button{
+    width:100%;
+    height:55px;
+    border-radius:10px;
+    font-size:22px;
+    font-weight:bold;
 }
 
 </style>
 """, unsafe_allow_html=True)
 
-st.markdown('<p class="title">🧮 Smart Calculator</p>', unsafe_allow_html=True)
+# ----------------------------
+# Sidebar
+# ----------------------------
+with st.sidebar:
 
-st.markdown(
-"""
-<p class="subtitle">
-Developed by <b>Aleesha Nadeem</b><br>
-🚀 <b>2(AN)K</b>
-</p>
-""",
-unsafe_allow_html=True
-)
+    st.title("👩‍💻 Developer")
+
+    st.markdown("## Aleesha Nadeem")
+
+    st.markdown("### 🚀 2(AN)K")
+
+    st.divider()
+
+    st.info(
+        """
+        **Smart Calculator**
+
+        Built with ❤️ using Python & Streamlit.
+        """
+    )
+
+# ----------------------------
+# Title
+# ----------------------------
+st.title("🧮 Smart Calculator")
+
+st.caption("Fast • Accurate • Modern")
 
 st.divider()
 
+# ----------------------------
+# Inputs
+# ----------------------------
 num1 = st.number_input("First Number", value=0.0)
 
 operator = st.selectbox(
-    "Operator",
+    "Choose Operator",
     ["+", "-", "*", "/", "//", "%", "**"]
 )
 
 num2 = st.number_input("Second Number", value=0.0)
 
-if st.button("🚀 Calculate", use_container_width=True):
+# ----------------------------
+# Button
+# ----------------------------
+if st.button("🚀 Calculate"):
 
     valid = True
 
@@ -102,29 +120,33 @@ if st.button("🚀 Calculate", use_container_width=True):
     elif operator == "**":
         result = num1 ** num2
 
+    else:
+        st.error("❌ Invalid Operator")
+        valid = False
+
     if valid:
 
-        st.success(f"{num1} {operator} {num2} = {result}")
+        st.success(f"### {num1} {operator} {num2} = {result}")
 
         if result > 0:
-            st.info("🟢 Positive Result")
+            st.success("🟢 Positive Result")
 
         elif result < 0:
             st.warning("🟠 Negative Result")
 
         else:
-            st.error("⚪ Zero Result")
+            st.info("⚪ Zero Result")
 
+# ----------------------------
+# Footer
+# ----------------------------
 st.divider()
 
 st.markdown(
 """
 <div class="footer">
-
-Made with ❤️ using Streamlit
-
+Made with ❤️ using Streamlit<br><br>
 <b>Aleesha Nadeem | 2(AN)K</b>
-
 </div>
 """,
 unsafe_allow_html=True
