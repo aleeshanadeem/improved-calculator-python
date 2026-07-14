@@ -95,6 +95,6 @@ st.markdown("""
 <div class="developer-box">
     <p class="developed">Developed by</p>
     <h2 class="name">Aleesha Nadeem</h2>
-    <p class="brand">🚀 2(AN)K</p>
+    <p class="brand"> 2(AN)K</p>
 </div>
 """, unsafe_allow_html=True)
