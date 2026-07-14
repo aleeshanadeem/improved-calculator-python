@@ -20,7 +20,7 @@ with st.sidebar:
             Aleesha Nadeem
         </h3>
         <p style="margin:0;font-size:18px;color:#ff9800;font-weight:bold;">
-            🚀 2(AN)K
+             2(AN)K
         </p>
     </div>
     """, unsafe_allow_html=True)
