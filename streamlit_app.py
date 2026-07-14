@@ -9,55 +9,7 @@ st.set_page_config(
     layout="centered"
 )
 
-# ----------------------------
-# Custom CSS
-# ----------------------------
-st.markdown("""
-<style>
 
-h1{
-    text-align:center;
-    color:#00E5FF;
-    font-size:50px;
-}
-
-.footer{
-    text-align:center;
-    color:gray;
-    margin-top:40px;
-}
-
-.stButton>button{
-    width:100%;
-    height:55px;
-    border-radius:10px;
-    font-size:22px;
-    font-weight:bold;
-}
-
-</style>
-""", unsafe_allow_html=True)
-
-# ----------------------------
-# Sidebar
-# ----------------------------
-with st.sidebar:
-
-    st.title("👩‍💻 Developer")
-
-    st.markdown("## Aleesha Nadeem")
-
-    st.markdown("### 🚀 2(AN)K")
-
-    st.divider()
-
-    st.info(
-        """
-        **Smart Calculator**
-
-        Built with ❤️ using Python & Streamlit.
-        """
-    )
 
 # ----------------------------
 # Title
@@ -145,7 +97,6 @@ st.divider()
 st.markdown(
 """
 <div class="footer">
-Made with ❤️ using Streamlit<br><br>
 <b>Aleesha Nadeem | 2(AN)K</b>
 </div>
 """,
